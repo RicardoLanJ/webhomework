@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, Verdana, sans-serif;
+}
+
+ul {
+    list-style: none;
+    width: 0px;
+    height: 0px;
+}
+
+span {
+    font-weight: bold;
+}
+
+
+/*-----------------------basic setting-----------------------------------------*/
+
+#button {
+    overflow: visible;
+    margin: auto;
+    position: relative;
+    top: 500px;
+    width: 28px;
+    height: 28px;
+}
+
+#button,
+#button * {
+    border-radius: 50% 50%;
+}
+
+#button * {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*for the gap to hover-----------------------------------------------------*/
+
+#maskforgap {
+    width: 10px;
+    height: 10px;
+    left: 9px;
+    top: 9px;
+    transition: transform 0.5s ease 1s;
+}
+
+#button:hover #maskforgap {
+    transform: scale(14, 14);
+    transition: transform 0.5s ease 0.5s;
+}
+
+
+/*--------------------------------apb----------------------------------------*/
+
+.apb .icon {
+    background-image: url(assets/images/apb/atplus_white.png);
+    width: 28px;
+    height: 28px;
+    background-color: rgb(151, 155, 210);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 78%;
+    transition: background-image, background-color 0.3s, transform 0.3s ease-out, background-position;
+    transition-delay: 1.3s;
+}
+
+#button:hover .apb .icon {
+    background-image: url(assets/images/apb/atplus_green.png);
+    background-color: rgba(48, 63, 159, 1);
+    background-position: 58% 46%;
+    background-size: 78%;
+    transform: scale(2, 2);
+    transition: background-image, background-color 0.5s, transform 0.5s ease-out, background-position;
+    transition-delay: 0.5s;
+}
+
+
+/*--------------------------------control----------------------------------------*/
+
+#control-ring .button {
+    background-image: url(assets/images/control-ring-container/nomask.png);  /*just a trick*/
+    background-color: rgb(104, 104, 104);
+    background-repeat: no-repeat;
+    background-position: -50% -50%;  /*for the trick*/
+    background-size: 52%;
+    width: 28px;
+    height: 28px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out 1s, transform 0.5s ease 1s, background-position 0s ease 1s, background-image 1s ease 1s, width 0s ease 3s, height 0s ease 3s;
+}
+
+#control-ring-container .message span {  /*init unread*/
+    background-color: red;
+    padding: 1px 0px 0px 5px;
+    display: block;  /*must*/
+    width: 15px;
+    height: 19px;
+    color: white;
+    opacity: 0;  /*for disappear immidiately*/
+    transition: opacity 0s ease 1s, left 0s ease 3s, top 0s ease 3s;
+}
+
+#button:hover #control-ring .button {  /*common setting*/
+    /*border  不缩小*/
+    opacity: 1;
+    background-position: 50% 50%;
+    transition: opacity 0.5s ease 0.5s, transform 1s ease 0.5s, background-position 0s ease 0.5s;
+    width: 36px;
+    height: 36px;
+}
+
+
+/*translate*/
+
+#button:hover #control-ring .mask {
+    transform: translate(-71px, -40px);
+    background-image: url(assets/images/control-ring-container/nomask.png);
+}
+
+#button:hover #control-ring-container .history {
+    transform: translate(-81px, 1px);
+    background-image: url(assets/images/control-ring-container/history.png);
+}
+
+#button:hover #control-ring-container .message {
+    transform: translate(-66px, 42px);
+    background-image: url(assets/images/control-ring-container/message.png);
+}
+
+#button:hover #control-ring-container .message span {  /*unread*/
+    opacity: 1;
+    position: relative;
+    left: 24px;
+    top: -5px;
+    transition: opacity 0s ease 0s, left 0s ease 0s, top 0s ease 0s;
+}
+
+#button:hover #control-ring-container .setting {
+    transform: translate(-31px, 65px);
+    background-image: url(assets/images/control-ring-container/setting.png);
+}
+
+#button:hover #control-ring-container .sign {
+    transform: translate(15px, 61px);
+    background-image: url(assets/images/control-ring-container/signin.png);
+}
+
+
+/*-----------------------------info--------------------------------------------*/
+
+#info-bar .info li span {   /*number's position*/
+    position: relative;
+    left: 30px;
+}
+
+#info-bar {
+    width: 28px;
+    height: 28px;
+    background-color: rgb(104, 104, 104);
+    transition: transform 0.5s ease 1s;
+    overflow: hidden;   /*must*/
+}
+
+#button:hover #info-bar {         /*just bar become bigger*/
+    transform: translate(0px, -105px) scale(5, 5);
+    transition: transform 1s ease 0.5s;
+}
+
+#info-bar .info {
+    transition: transform 0s ease 3s;
+}
+
+#button:hover #info-bar .info {
+    transform: scale(0.2, 0.2);  /*prevent child of bar larger too !!!*/
+    transition: transform 0s ease 0s;
+}
+
+
+/*setting of info icon*/
+
+#info-bar .like {
+    position: relative;
+    left: 78px;
+    top: 30px;
+}
+
+#info-bar .posted {
+    position: relative;
+    left: 28px;
+    top: 49px;
+}
+
+#info-bar .user {
+    position: relative;
+    left: 45px;
+    top: 20px;
+    font-size: 13pt;
+}
+
+#info-bar .comment {
+    position: relative;
+    left: 39px;
+    top: 38px;
+    font-size: 18pt;
+}
+
+#info-bar .mine {
+    color: #079E6E;
+    font-size: 12pt;
+}
+
+#info-bar .page {
+    color: white;
+}
+
+
+/*-----------------------------------------------------------------------------*/
+
+
+/*    | ------------ hover  -----------  -------------|  ----not hover---------------------|  time line*/
+/*    | ---0.5s---- | ------0.5s-----    ----1s-------|  --1s---| --0.3s--  ---0.2s----0.3s--    |          */
+/*                       apb               other                        other         apb  |          */
+

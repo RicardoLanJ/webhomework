@@ -157,6 +157,10 @@ span {
     left: 30px;
 }
 
+#info-bar .info li img {
+    border-radius: 0;
+}
+
 #info-bar {
     width: 28px;
     height: 28px;

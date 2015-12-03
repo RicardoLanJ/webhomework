@@ -1,0 +1,107 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    marks: 0;
+    padding: 0; 
+}
+
+body {
+    font-family: Century Gothic, "Microsoft YaHei",  arial;
+}
+
+.wrap {
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 36px;
+    font-weight: thin;
+}
+
+p {
+    font-size: 19px;
+}
+
+.consolo {
+    font-size: 14px;
+    width: 400px;
+    height: 60px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.consolo div {
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    vertical-align: top;
+}
+
+.sidw {
+    text-align: left;
+}
+
+.sidws {
+    border: 1px solid #D5D5D5;
+    display: inline-block;
+    padding-left: 6px;
+    width: 180px;
+}
+
+#start, #stop {
+    cursor: pointer;
+}
+
+#state {
+    height: 75%;
+    padding-top: 3px;
+}
+
+.sid {
+    text-align: right;
+    font-size: 20px;
+}
+
+.sid span {
+    vertical-align: middle;
+    display: inline-block;
+    width: 45px;
+    height: 23px;
+    border: 1px solid #D5D5D5;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.ins {
+    text-align: left;
+}
+
+/*js*/
+#game-container {
+    width: 270px;
+    height: 200px;
+    padding: 5px 2px;
+    margin: 30px auto;
+    border: solid #A8A8A8;
+    border-width: 1px 0px;
+}
+
+.mole {
+    -webkit-appearance: none;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: grey 1px 1px 1px 0px inset;
+    width: 18px;
+    height: 18px;
+    margin: 6px 4px;
+    outline: 0;
+}
+
+.showup {
+    box-shadow: #66CCFF 0.6px 0.6px 1px 5px inset;
+}

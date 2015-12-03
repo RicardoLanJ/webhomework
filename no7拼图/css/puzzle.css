@@ -1,0 +1,125 @@
+html, body {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    font-family: 微软雅黑, Century Gothic, arial;
+}
+
+h1 {
+    text-align: center;
+}
+
+.wrap {
+    margin: auto;
+    width: 1000px;
+    height: 540px;
+    margin-top: 40px;
+}
+
+.title {
+    position: absolute;
+    top: 50px;
+    left: 800px;
+}
+
+.game {
+    margin: auto;
+    font-size: 0px;
+    position: relative;
+}
+
+/*.game, .wrap {
+    border: 1px solid gray;
+}*/
+
+
+.game div {
+    width: 25%;
+    height: 25%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/*hover*/
+
+.cover {
+    bottom:0;
+    right:0;
+    z-index:-1;
+    border: none !important;
+}
+
+.win {
+    border: none !important;
+}
+
+.gwin {
+    box-shadow: #00CCFF 0px 0px 50px 0px;
+}
+
+.top1 {
+    top: 0px;
+}
+
+.top2 {
+    top: 25%;
+}
+
+.top3 {
+    top: 50%;
+}
+
+.top4 {
+    top: 75%;
+}
+
+.left1 {
+    left: 0px;
+}
+
+.left2 {
+    left: 25%;
+}
+
+.left3 {
+    left: 50%;
+}
+
+.left4 {
+    left: 75%;
+}
+
+.button {
+    display: inline-block;
+    background-color: #4584F8;
+    color: white;
+    width:130px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    box-shadow: gray 3px 3px 5px 0px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.refresh {
+    position: relative;
+    left: 435px;
+    top: 20px;
+}
+
+.next {
+    position: relative;
+    left: 470px;
+    top: 20px;
+}
+
+.unvis {
+    display: none !important;
+}

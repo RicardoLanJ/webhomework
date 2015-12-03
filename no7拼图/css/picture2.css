@@ -1,0 +1,59 @@
+.game {
+    width: 412px;
+    height: 412px;
+}
+
+.gwin {
+    box-shadow: black 0px 0px 50px 0px;
+}
+
+.game div:nth-child(1) {
+    background-image: url("../images/onepunch_01.gif");
+}
+
+.game div:nth-child(2) {
+    background-image: url("../images/onepunch_02.gif");
+}
+
+.game div:nth-child(3) {
+    background-image: url("../images/onepunch_03.gif");
+}
+.game div:nth-child(4) {
+    background-image: url("../images/onepunch_04.gif");
+}
+.game div:nth-child(5) {
+    background-image: url("../images/onepunch_05.gif");
+}
+.game div:nth-child(6) {
+    background-image: url("../images/onepunch_06.gif");
+}
+.game div:nth-child(7) {
+    background-image: url("../images/onepunch_07.gif");
+}
+.game div:nth-child(8) {
+    background-image: url("../images/onepunch_08.gif");
+}
+.game div:nth-child(9) {
+    background-image: url("../images/onepunch_09.gif");
+}
+.game div:nth-child(10) {
+    background-image: url("../images/onepunch_10.gif");
+}
+.game div:nth-child(11) {
+    background-image: url("../images/onepunch_11.gif");
+}
+.game div:nth-child(12) {
+    background-image: url("../images/onepunch_12.gif");
+}
+.game div:nth-child(13) {
+    background-image: url("../images/onepunch_13.gif");
+}
+.game div:nth-child(14) {
+    background-image: url("../images/onepunch_14.gif");
+}
+.game div:nth-child(15) {
+    background-image: url("../images/onepunch_15.gif");
+}
+.game div:nth-child(16) {
+    background-image: url("../images/onepunch_16.gif");
+}

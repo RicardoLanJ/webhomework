@@ -1,0 +1,52 @@
+body {
+    font-family: arial;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+/*-----------------basic table-------------------*/
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid grey;
+    text-align: left;
+}
+
+#todo td, th {
+    padding: 2px 8px 2px 2px;
+}
+
+#staff td, th {
+    padding: 2px 20px 2px 2px;
+}
+
+/*----------------tablesofter configure------------------------*/
+.tablesorter-header {
+    color: white;
+    background-color: #031B7F;
+}
+
+.tablesorter tr.odd > td {
+    background-color: white;
+}
+.tablesorter tr.even > td {
+    background-color: lightgrey;
+}
+
+.tablesorter-headerAsc {
+    background-image: url(ascend.png);
+    background-position: 97% 30%;
+    background-color: #A6AFFC;
+    background-repeat: no-repeat;
+}
+
+.tablesorter-headerDesc {
+    background-image: url(descend.png);
+    background-color: #A6AFFC;
+    background-repeat: no-repeat;
+    background-position: 97% 30%;
+}

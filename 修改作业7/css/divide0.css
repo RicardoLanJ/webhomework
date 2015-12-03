@@ -1,0 +1,12 @@
+.game {
+    width: 352px;
+    height: 352px;
+}
+
+.pic {
+    background-repeat: no-repeat;
+    background-image: url('../images/panda.jpg');
+}
+
+
+

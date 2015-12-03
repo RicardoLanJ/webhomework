@@ -1,0 +1,10 @@
+.game {
+    width: 305px;
+    height: 346px;
+}
+
+.pic {
+    background-repeat: no-repeat;
+    background-image: url('../images/bilibili.jpg');
+}
+

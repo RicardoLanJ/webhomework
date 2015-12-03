@@ -1,0 +1,59 @@
+.game {
+    width: 625px;
+    height: 471px;
+}
+
+.gwin {
+    box-shadow: red 0px 0px 50px 0px;
+}
+
+.game div:nth-child(1) {
+    background-image: url("../images/jiang_01.gif");
+}
+
+.game div:nth-child(2) {
+    background-image: url("../images/jiang_02.gif");
+}
+
+.game div:nth-child(3) {
+    background-image: url("../images/jiang_03.gif");
+}
+.game div:nth-child(4) {
+    background-image: url("../images/jiang_04.gif");
+}
+.game div:nth-child(5) {
+    background-image: url("../images/jiang_05.gif");
+}
+.game div:nth-child(6) {
+    background-image: url("../images/jiang_06.gif");
+}
+.game div:nth-child(7) {
+    background-image: url("../images/jiang_07.gif");
+}
+.game div:nth-child(8) {
+    background-image: url("../images/jiang_08.gif");
+}
+.game div:nth-child(9) {
+    background-image: url("../images/jiang_09.gif");
+}
+.game div:nth-child(10) {
+    background-image: url("../images/jiang_10.gif");
+}
+.game div:nth-child(11) {
+    background-image: url("../images/jiang_11.gif");
+}
+.game div:nth-child(12) {
+    background-image: url("../images/jiang_12.gif");
+}
+.game div:nth-child(13) {
+    background-image: url("../images/jiang_13.gif");
+}
+.game div:nth-child(14) {
+    background-image: url("../images/jiang_14.gif");
+}
+.game div:nth-child(15) {
+    background-image: url("../images/jiang_15.gif");
+}
+.game div:nth-child(16) {
+    background-image: url("../images/jiang_16.gif");
+}

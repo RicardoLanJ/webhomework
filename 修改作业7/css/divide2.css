@@ -1,0 +1,9 @@
+.game {
+    width: 335px;
+    height: 398px;
+}
+
+.pic {
+    background-repeat: no-repeat;
+    background-image: url('../images/yellow.jpg');
+}

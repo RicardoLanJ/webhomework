@@ -1,0 +1,159 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+#game-container {
+    text-align: center;
+    width: 940px;
+    height: 620px;
+    margin: auto;
+    position: relative;
+    top: 25px;
+    font-family: Consolas, Verdana, Microsoft YaHei, sans-serif;
+    word-spacing: -2px;
+    line-height: 25px;
+    box-shadow: grey 5px 5px 20px 0px;
+    overflow: hidden;
+}
+
+.head {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.tip {
+    font-size: 22px;
+    height: 25px;
+}
+.dn {
+    color: white;
+}
+
+.comment {
+    display: inline-block;
+    width:650px;
+    text-align: left;
+    font-size:16px;
+}
+
+.example {
+    width:100px;
+    height:30px;
+    margin:auto;
+    border: 1px solid black;
+    background-color: #EEE;
+}
+
+#map {
+    width:500px;
+    height: 300px;
+    margin: auto;
+    position: relative;
+}
+
+.cm {
+    position: absolute;
+    border:1px solid black;
+    background-color: #EEE;
+    transition: all 0.5s;
+}
+
+
+#left-top {
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    left: 0px;
+}
+
+#top {
+    width: 196px;
+    height: 50px;
+    top: 0px;
+    left: 151px;
+    border-right: 1px solid #EEE;
+    border-left: 1px solid #EEE;
+    z-index:233;
+}
+
+#right-top {
+    width: 150px;
+    height: 200px;
+    top: 0px;
+    right: 0px;
+}
+
+#left-down {
+    width:200px;
+    height:50px;
+    bottom: 0px;
+    left: 0px;
+    border-right: 1px solid #EEE;
+    z-index:233;
+}
+
+#down {
+    width: 96px;
+    height:200px;
+    bottom: 0px;
+    left: 201px;
+}
+
+#map #right-down {
+    width:200px;
+    height: 50px;
+    bottom: 0px;
+    right:0px;
+    border-left: 1px solid #EEE;
+    z-index:233;
+}
+
+.se {
+    width:40px;
+    height: 30px;
+    top: 204px;
+    position: absolute;
+    border: 1px solid black;
+    font-size: 32px;
+    padding-top: 10px;
+    -webkit-user-select:none;
+}
+
+#start {
+    background-color:#83FF82;
+}
+
+#end {
+    background-color:#8684FF;
+    right: 0px;
+}
+
+.touch {
+    height: 49px;
+    width: 2px;
+    position: absolute;
+    top: 200px;
+    right: 30px;
+}
+
+#touch-L {
+    right: 38px;
+}
+
+#touch-R {
+    right: 0px;
+}
+
+/*js's css*/
+#map .mouseover {
+    background-color: red;
+}
+
+#game-container .showup {
+    transition: all 0.5s;
+    color: black;
+}

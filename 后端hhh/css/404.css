@@ -1,0 +1,27 @@
+body {
+    font-family: 微软雅黑;
+    font-size: 32px;
+    background: no-repeat url("http://smhos.org/wp-content/uploads/2014/10/Silver-Blur-Background-Wallpaper.jpg");
+    background-size: 100% 100%;
+        color: grey;
+}
+
+div {
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    font-size: 40px;
+}
+
+p {
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+    margin-left: 200px;
+}
+
+li {
+    margin: 30px;
+}

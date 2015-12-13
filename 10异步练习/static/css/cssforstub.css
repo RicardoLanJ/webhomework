@@ -1,0 +1,234 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    font-family: century gothic, Arial, sans-serif;
+}
+
+#button:hover #info-bar li,
+#control-ring li, #info-bar,
+.apb {
+    cursor: pointer;
+}
+
+#at-plus-container {
+    position: relative;
+    width: 180px;
+    margin: auto;
+    height: 100%;
+}
+
+#bottom-positioner {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+#button {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin: 97px 77px;
+}
+
+
+/*-------------------------------------------------------------*/
+
+#info-bar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 98px;
+    left: 78px;
+    background-color: #7E7E7E;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    z-index: 2333;
+}
+
+#button:hover #info-bar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 150px;
+    left: 25px;
+    background-color: #7E7E7E;
+    opacity: 1;
+    transition: all 0.5s ease 0.5s;
+}
+
+#button:hover .answer {
+    position: relative;
+    top: 45px;
+    text-align: center;
+    font-size: 32px;
+    color: white;
+}
+
+
+/*-------------------------------------------------------------*/
+
+#control-ring-container {
+    overflow: hidden;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    bottom: 97px;
+    left: 77px;
+    border-radius: 50%;
+    transition: all 0.5s ease 0s;
+    z-index: 0;
+}
+
+#button:hover #control-ring-container {
+    bottom: 20px;
+    left: 0px;
+    width: 180px;
+    height: 180px;
+    transition: all 0.5s ease 0.5s;
+}
+
+#control-ring {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    margin-top: -60px;
+    margin-left: -78px;
+    transition: all 0.5s ease 0s;
+}
+
+#button:hover #control-ring {
+    margin-top: 17px;
+    margin-left: -0px;
+    transition: all 0.5s ease 0.5s;
+}
+
+#control-ring-container li {
+    position: absolute;
+    display: block;
+    list-style-type: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #303F9F center no-repeat;
+    background-size: 18px 18px;
+    margin-top: 60px;
+    margin-left: 38px;
+    opacity: 0;
+    color: #00C791;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    transition: background-color 0s,
+                width 0.5s ease 0s,
+                height 0.5s ease 0s,
+                opacity 0.5s ease 0s,
+                margin 0.5s ease 0s;
+}
+
+#control-ring-container li.disable {
+    background-color: grey;
+}
+
+#button:hover #control-ring-container li {
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    transition: background-color 0s,
+                width 0.5s ease 0.5s,
+                height 0.5s ease 0.5s,
+                opacity 0.5s ease 0.5s,
+                margin 0.5s ease 0.5s;
+}
+
+#control-ring li span.unread {
+    display: block;
+    position: absolute;
+    top: -7px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font: bold 11pt Arial, sans-serif;
+    box-sizing: border-box;
+    transition-duration: 0s;
+    opacity: 0;
+    text-align: center;
+    line-height: 20px;
+    display: none;
+}
+
+#button:hover #control-ring li span.unread {
+    opacity: 1;
+}
+
+#button:hover #control-ring li:nth-child(1) {
+    margin-top: 20px;
+    margin-left: -30px;
+}
+
+#button:hover #control-ring li:nth-child(2) {
+    margin-top: 60px;
+    margin-left: -40px;
+}
+
+#button:hover #control-ring li:nth-child(3) {
+    margin-top: 95px;
+    margin-left: -25px;
+}
+
+#button:hover #control-ring li:nth-child(4) {
+    margin-top: 118px;
+    margin-left: 10px;
+}
+
+#button:hover #control-ring li:nth-child(5) {
+    margin-top: 113px;
+    margin-left: 55px;
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+#button .apb {
+    border-radius: 50%;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    bottom: 98px;
+    left: 78px;
+    background: url("../images/apb/atplus_white.png") center no-repeat;
+    background-size: 20px 15px;
+    background-color: #9D9FD8;
+    transition: all 0.5s ease 0.5s;
+}
+
+#button:hover .apb {
+    width: 50px;
+    height: 50px;
+    bottom: 85px;
+    left: 65px;
+    background-image: url("../images/apb/atplus_green.png");
+    background-size: 37px 28px;
+    background-color: #303F9F;
+    transition: all 0.5s ease 0.5s;
+}
+
+/*-----------------*/
+.info {
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: -350px;
+    font-size: 11px;
+    font-family: century gothic;
+}

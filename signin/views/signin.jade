@@ -1,0 +1,62 @@
+extends layout
+
+block content
+    div.banner <span>首页</sapn> <span></span> <span></span> ♂
+    div.wrap
+        if register
+            img(src="/images/iwantyou.png" class="datu")
+        else
+            div.gif#gif
+        div.signbox
+            if register
+                p 用户注册
+            else 
+                p 登录
+            if error
+                div.info #{error}
+            form(id="myform" method="post")
+
+                div.uesrname.forabusolute
+                    input(type="text" name="username" placeholder="姓名" id="username" value=user.username)
+                    div.errorAndTip.message-position
+ 
+                if register
+                    div.sid.forabusolute
+                        input(type="text" name="sid" placeholder="学号" id="sid" value=user.sid)
+                        div.errorAndTip.message-position
+
+    
+                div.password.forabusolute
+                    input(type="password" name="password" placeholder="密码" id="password")
+                    div.errorAndTip.message-position
+   
+                if register
+                    div.repeatPassword.forabusolute
+                        input(type="password" name="repeatPassword" placeholder="重复密码" id="repeatPassword")
+                        div.errorAndTip.message-position
+    
+                    div.phone.forabusolute
+                        input(type="text" name="phone" placeholder="电话" id="phone" value=user.phone)
+                        div.errorAndTip.message-position
+    
+                    div.email.forabusolute
+                        input(type="text" name="email" placeholder="邮箱" id="email" value=user.email)
+                        div.errorAndTip.message-position
+    
+                div.buttons
+                    if register
+                        input.button.reg(type="submit" value="注册" class="submit" id="submit")
+                        a.gotoLogin(href="/") 已有账号？立即登录
+                        input.button(type="reset" value="重置" class="reset" id="reset")
+                        input.button(type="checkbox" name="protocol" class="proto" checked ="checked")
+                        label 我已认真阅读并同意使用协议
+                    else
+                        input.button(type="submit" value="登录" class="submit" id="submit")
+                        div.ToRegister#ToRegister 注册
+                    
+    footer <span>2048</span><br/>全球最大同性社交网站<br/> Copyright © 2015-2333 保留所有权利
+    script(type='text/javascript' src='javascripts/validator.js')
+    if register
+        script(type='text/javascript' src='javascripts/signup.js')
+    else
+        script(type='text/javascript' src='javascripts/signin.js')

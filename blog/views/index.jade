@@ -1,0 +1,29 @@
+extends layout
+
+block body
+  div.whole
+    div.header(ng-controller='headerCtrl')
+      h2.appname My Blog // {{test}}的博客
+      div.manualbackground
+      div.manual
+        div.login#login 登录
+    div.menu
+      ul
+        li.home
+          a(href='/') 主页 // 目录/摘要视图
+        li
+          a(href='/addPost') 写写写  //ng if
+        li
+          a(href='/manage') 管理博客 // ng if 置顶
+    div.content
+      div.postslist
+        div(ng-view)
+
+  script(src='js/jquery-1.11.3.js')
+  script(src='js/lib/angular/angular.js')
+  script(src='js/app.js')
+  script(src='js/services.js')
+  script(src='js/controllers.js')
+  script(src='js/filters.js')
+  script(src='js/directives.js')
+  script(src='js/client.js')

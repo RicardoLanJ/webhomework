@@ -5,7 +5,8 @@
 
 var express = require('express'),
   routes = require('./routes'),
-  api = require('./routes/api');
+  api = require('./routes/api'),
+  accountApi = require('./routes/accountApi');
 
 var app = module.exports = express.createServer();
 
@@ -45,6 +46,9 @@ app.get('/api/post/:id', api.post);
 app.post('/api/post', api.addPost);
 app.put('/api/post/:id', api.editPost);
 app.delete('/api/post/:id', api.deletePost);
+
+app.post('/accountApi/checkUnique', accountApi.checkUserUnique);
+app.put('/accountApi/addAccount', accountApi.addAccount);
 
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);

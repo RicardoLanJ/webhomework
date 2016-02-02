@@ -9,17 +9,39 @@ angular.module('myApp.services', []).
   value('version', '0.1');
 
 //register userServe
-angular.module('myApp').factory('userServe', userServe);
+angular.module('myApp.services').factory('accountServe', accountServe);
 
-userServe.$inject = [];
+function accountServe ($http, $q) {
+	var accountServe = {};
 
-function userServe () {
-	var userServe = {};
-	userServe.checkUser = checkUser;
+	accountServe.checkUser = checkUser;
+	accountServe.setCurrentUser = setCurrentUser;
+	accountServe.addAccount = addAccount;
+	accountServe.checkUserUnique = checkUserUnique;
+	
+	accountServe.currentUser = {};
 
-	return userServe;
+	return accountServe;
 
 	function checkUser (user) {
 		return Promise.resolve('lalala');
+	}
+
+	function setCurrentUser (user) {
+		currentUser = user;
+	}
+
+	function checkUserUnique (user) {
+		var defer = $q.defer();
+		$http
+		.post('/accountApi/checkUnique', user)
+		.success(function(unique){
+			defer.resolve();
+		});
+		return defer.promise;
+	}
+
+	function addAccount (user) {
+		$http.put('/accountApi/addAccount', user);
 	}
 }

@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives']).
+angular.module('myApp', ['ngRoute', 'myApp.filters', 'myApp.services', 'myApp.directives', 'myApp.controllers']).
   config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/', {
@@ -38,7 +38,8 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives'])
       logoutSuccess: 'auth-logout-success',
       sessionTimeout: 'auth-session-timeout',
       notAuthenticated: 'auth-not-authenticated',
-      notAuthorized: 'auth-not-authorized'
+      notAuthorized: 'auth-not-authorized',
+      notUnique: 'user-not-unique'
   }).constant('USER_ROLES', {
       all: '*',
       admin: 'admin',

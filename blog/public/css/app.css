@@ -126,7 +126,7 @@ html, body {
 /*--------------------------------------*/
 
 .signinup {
-  width: 400px;
+  width: 600px;
   height: 300px;
 }
 
@@ -148,6 +148,16 @@ html, body {
   position: relative;
   top: 40px;
   left: 40px;
+}
+
+/*------------------------------------------*/
+
+input.ng-valid.ng-touched {
+  border: 1px solid green;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
 }
 
 /*div {

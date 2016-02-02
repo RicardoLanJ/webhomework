@@ -59,27 +59,44 @@ function DeletePostCtrl($scope, $http, $location, $routeParams) {
   };
 }
 
+var app = angular.module('myApp.controllers', []);
+
+app
+.controller('headerCtrl', headerCtrl)
+.controller('switchInOrUp', switchInOrUp);
+
 function signinupCtrl ($scope) {
   
 }
 
-//switchInOrUp.$inject = ['$scope', '$rootScope', 'AUTH_EVENTS', 'userServe'];
-function switchInOrUp ($scope, $rootScope, AUTH_EVENTS, userServe) {
+//switchInOrUp.$inject = ['$scope', '$rootScope', 'AUTH_EVENTS', 'accountServe'];
+function switchInOrUp ($scope, $rootScope, AUTH_EVENTS, accountServe) {
   $scope.active = 'signin';
 
   $scope.user = {
     username : '',
     password : ''
   };
+
   $scope.login = function(user) {
-    userServe
+    accountServe
     .checkUser(user)
     .catch(function(){
       $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
     })
     .then(function() {
       $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
-      $scope.setCurrentUser(user);
+      accountServe.setCurrentUser(user);
+    });
+  };
+
+  $scope.register = function(user) {
+    accountServe
+    .checkUserUnique(user)
+    .then(function(){
+      accountServe.addAccount(user);
+    }, function(){
+      $rootScope.$broadcast(AUTH_EVENTS.notUnique);
     });
   };
 
@@ -89,4 +106,8 @@ function headerCtrl ($scope, AUTH_EVENTS) {
   $scope.$on(AUTH_EVENTS.loginSuccess, function(){
     $scope.test = 'lalalala';
   });
+}
+
+function centralCtrl ($scope, USER_ROLES) {
+  
 }

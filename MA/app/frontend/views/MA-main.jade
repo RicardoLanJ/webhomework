@@ -1,0 +1,34 @@
+.student-banner.ma-blue
+    a.gotohomepage.ma-href(href='/') MyAchievement
+    ul
+        li group15
+        li 14331161
+        li
+            .btn-group(uib-dropdown='', dropdown-append-to-body='')
+                  button#btn-append-to-to-body.username-dropdown(type='button', uib-dropdown-toggle='')
+                    | Dropdown on Body 
+                    span.caret
+                  ul.dropdown-menu(uib-dropdown-menu='', role='menu', aria-labelledby='btn-append-to-to-body')
+                    li(role='menuitem')
+                      a(href='#') Action
+                    li(role='menuitem')
+                      a(href='#') Another action
+                    li(role='menuitem')
+                      a(href='#') Something else here
+                    li.divider
+                    li(role='menuitem')
+                      a(href='#') Separated link
+.homework-container
+    ul.homeworklist
+        li(ng-repeat='homework in student.AllHomework')
+            div.homework-top
+                span.homeworkname 作业{{$index + 1}}: {{homework.homeworkName}}
+                span.homeworkstatus(homeworkstatu='homework.deadline') future
+            div.homework-mid
+            div.homework-bottom
+                span
+                    a(ng-href='{{homework.url}}') 作业链接
+                span
+                    a.float-right 源文件
+                span
+                    a.float-right.most-right 查看评审

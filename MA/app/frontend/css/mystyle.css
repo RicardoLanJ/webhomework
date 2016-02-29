@@ -1,0 +1,233 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /*"Microsoft YaHei"*/
+}
+
+.my-signinbox {
+	width: 300px;
+	height: 250px;
+	/*border: 1px solid red;*/
+	position: relative;
+	margin: auto;
+	top: 350px;
+}
+
+.my-signinbox-footer {
+	text-align: center;
+}
+
+.my-signin-background, .my-signin-background-mask {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.my-signin-background {
+	background: url('../img/signinBackground.jpg') no-repeat;
+	background-size: 100% 100%;
+	-webkit-filter: blur(1px);
+}
+
+.my-signin-background-mask {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.my-signinbox label, .my-signinbox p {
+	color: white;
+}
+
+.MA-title {
+	position: absolute;
+	color: white;
+	top: 50px;
+	left: 200px;
+}
+
+.MA-my {
+	position: relative;
+	font-size: 80px;
+}
+
+.MA-ach {
+	position: relative;
+	font-size: 20px;
+	top: -20px;
+}
+
+.ma-blue {
+	background-color: #1565c0;
+}
+
+.ma-href, .ma-href:hover {
+	 text-decoration: none;
+	 color: #9d9d9d;
+}
+
+.ma-href:hover {
+	color: white;
+}
+
+/*--------------banner---------*/
+.student-banner {
+	width: 100%;
+	height: 50px;
+	font-size: 18px;
+}
+
+.student-banner a {
+	display: inline-block;
+	height: 50px;
+	width: 150px;
+	text-align: center;
+	vertical-align: center;
+	box-sizing: border-box;
+	padding-top: 12px;
+}
+
+.student-banner ul {
+	list-style-type: none;
+	float: right;
+	height: 100%;
+	margin: 0;
+}
+
+.student-banner ul li {
+	float: left;
+	color: white;
+	display: inline-block;
+	height: 100%;
+	margin: 0px 10px;
+	box-sizing: border-box;
+	padding-top: 12px;
+}
+
+.username-dropdown {
+	background-color: #1565c0;
+	border: none;
+}
+
+/*---------------homework----------*/
+.homework-container {
+	width: 100%;
+	padding: 0 10px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	/*border: 1px solid red;*/
+}
+
+.homeworklist {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.homeworklist li {
+	display: inline-block;
+	margin: 5px;
+	width: 24%;
+	overflow: hidden;
+	border-radius: 10px;
+	border: 1px solid grey;
+	height: 350px;
+}
+
+.homework-top, .homework-bottom {
+	background-color: #777;
+	height: 40px;
+	position: relative;
+}
+
+.homework-bottom {
+	background-color: #f5f5f5;
+	padding: 10px 10px;
+}
+
+.homework-bottom a {
+	cursor: pointer;
+}
+
+.homework-mid {
+	height: 270px;
+}
+
+.homeworkname, .homeworkstatus {
+	color: white;
+}
+
+.homeworkname {
+	position: relative;
+	left: 15px;
+	top: 7px;
+	font-size: 18px;
+}
+
+.homeworkstatus {
+	right: 20px;
+	top: 10px;
+	display: inline-block;
+	font-size: 11px;
+	padding: 0px 3px;
+	border-radius: 3px;
+	position: absolute;
+}
+
+.float-right {
+	float: right;
+}
+
+.most-right {
+	margin-right: 10px;
+}
+
+.status-future {
+	background-color: #83B75E;
+}
+
+.status-present {
+	background-color: #6FADDB;
+}
+
+.status-end {
+	background-color: #ECEBEB;
+}
+
+/*------------------teacherorta--------*/
+.managerWrap {
+	margin-top: 20px;
+}
+
+.buttonBar {
+	margin: 10px 10px;
+}
+
+.homeworkManager {
+	margin: 10px 10px;
+}
+
+.yinyong {
+	border-left: 2px solid #e5e4e3;
+	padding-left: 5px;
+	height:30px;
+	padding-top: 5px;
+	display:block;
+}
+
+.yinyong a {
+	margin-left:10px;
+}
+
+/*modifybox*/
+.my-modifybox {
+	width: 95%;
+	height: 300px;
+	margin:auto;
+}
+
+.float-left {
+	float: left;
+}
+
+/*student---------*/
+.studentManager {
+	margin: 10px 10px;
+}

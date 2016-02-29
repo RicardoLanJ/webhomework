@@ -1,0 +1,79 @@
+.student-banner.ma-blue
+    a.gotohomepage.ma-href(href='/') MyAchievement
+    ul
+        li group15
+        li 14331161
+        li
+            .btn-group(uib-dropdown='', dropdown-append-to-body='')
+                  button#btn-append-to-to-body.username-dropdown(type='button', uib-dropdown-toggle='')
+                    | Dropdown on Body 
+                    span.caret
+                  ul.dropdown-menu(uib-dropdown-menu='', role='menu', aria-labelledby='btn-append-to-to-body')
+                    li(role='menuitem')
+                      a(href='#') Action
+                    li(role='menuitem')
+                      a(href='#') Another action
+                    li(role='menuitem')
+                      a(href='#') Something else here
+                    li.divider
+                    li(role='menuitem')
+                      a(href='#') Separated link
+
+uib-tabset.managerWrap
+  uib-tab(heading='作业管理')
+    .homeworkManager(ng-controller='HomeworkManagerCtrl as HomeworkManager')
+      .buttonBar
+        button.btn.btn-info(type='button' ng-click='HomeworkManager.OpenChangeModal(-1)')
+          | 添加作业(￢_￢)
+      uib-accordion(close-others=false )
+        uib-accordion-group(heading='作业{{$index + 1}}：{{homework.homeworkName}}', ng-repeat='homework in HomeworkManager.AllHomework')
+          p 发布日期：{{homework.setupTime  | date:'yyyy-MM-dd HH:mm:ss'}}
+          p 提交日期：{{HomeworkManager.CulUploadDay(homework.deadline)  | date:'yyyy-MM-dd HH:mm:ss'}}
+          p deadline：{{homework.deadline  | date:'yyyy-MM-dd HH:mm:ss'}}
+          p.yinyong url:
+            a(ng-href='{{homework.url}}') {{homework.url}}
+          p.yinyong 备注：{{homework.remark}} 
+          button.btn.btn-danger(ng-click='HomeworkManager.OpenChangeModal($index)') 修改  
+        span(ng-hide='HomeworkManager.AllHomework.length') 作业再怎么找也没有啦...╮(╯_╰)╭
+  uib-tab(heading='学生管理')
+    .studentManager(ng-controller='StudentManagerCtrl as StudentManager')
+      .buttonBar
+        button.btn.btn-info(type='button' ng-click='StudentManager.OpenAddModal(-1)')
+          | 添加或删除
+      .TaList
+        uib-accordion(close-others=false )
+          uib-accordion-group(heading='{{Ta.username}}', ng-repeat='Ta in StudentManager.Tas')
+            p {{Ta.username}}
+            
+
+
+//ModifyBox.html
+script(type="text/ng-template" id="ModifyBox.html")
+  .modal-header
+    h3 {{ModifyBox.title}}
+  .modal-body
+    .form-group.my-modifybox
+      label.col-md-6 名称
+       input.form-control(ng-model='ModifyBox.newHomework.homeworkName' )
+      label.col-md-6 url
+        input.form-control(ng-model='ModifyBox.newHomework.url')
+      label.col-md-6 备注
+        input.form-control(ng-model='ModifyBox.newHomework.remark')
+      label.col-md-6(ng-controller='TimePickerCtrl as TimePicker') deadline (m/d/y)
+        input(type="text" class="form-control" uib-datepicker-popup="shortDate" ng-model="TimePicker.dt" is-open="TimePicker.opened" min-date="TimePicker.minDate" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" ng-change="TimePicker.change()")
+        span.input-group-btn
+          button.btn.btn-default(type='button', ng-click='TimePicker.open()')
+            i.glyphicon.glyphicon-calendar
+  .modal-footer
+    button.btn.btn-danger.float-left(type='button' ng-click='ModifyBox.delete()' ng-show='ModifyBox.buttonShow') 删除
+    button.btn.btn-primary(type='button' ng-click='ModifyBox.save()' ng-show='ModifyBox.buttonShow') 保存
+    button.btn.btn-primary(type='button' ng-click='ModifyBox.add()' ng-hide='ModifyBox.buttonShow') 添加
+    button.btn.btn-warning(type='button' ng-click='ModifyBox.cancel()') 取消
+
+script(type="text/ng-template" id="addStudentBox.html")
+  .modal-header
+    h3 {{StuBox.title}}
+  .modal-body
+    
+  .modal-footer
+    button.btn.btn-warning(type='button' ng-click='StuBox.cancel()') 取消

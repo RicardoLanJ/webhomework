@@ -1,0 +1,20 @@
+html
+  body
+    .my-signin-background
+    .my-signin-background-mask
+    .MA-title
+        p.MA-my My
+        p.MA-ach Achievements
+    .my-signinbox
+      .modal-body
+        .form-group
+          label(for='username') 用户名
+          input.form-control(type='username', name='username', ng-model='signinbox.user.username', placeholder='请输入用户名' uib-popover="预置为学号" popover-placement='top-right' popover-trigger='outsideClick')
+        .form-group
+          label(for='password') 密码
+          input.form-control(type='password', name='password', ng-model='signinbox.user.password', placeholder='请输入密码')
+        p
+          input(type='checkbox', name='remember', ng-model='signinbox.user.remember')
+          |  记住我
+      .my-signinbox-footer
+        button.btn.btn-primary(ng-click='signinbox.validator() && signinbox.signin()') Sign In
